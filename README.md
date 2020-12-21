@@ -22,7 +22,9 @@ open the project with intellij and build with gradle.
 then run the projects in the following order :
 
 1: discovery
+
 2: configserver
+
 3: all the other projects
 
 
