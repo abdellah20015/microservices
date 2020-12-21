@@ -1,6 +1,7 @@
 basic micro services architecture implementation using spring boot and spring boot libraries.
 
-i wrote an article in french about how i wrote this here.
+details about how this was implemented are in  [this article (in french)](https://bmar1.com/posts/microservices/simple_implementation/)
+
 
 # How to run
 
