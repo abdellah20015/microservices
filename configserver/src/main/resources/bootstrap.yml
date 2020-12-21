@@ -1,0 +1,19 @@
+server:
+  port: 9889
+
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${CONFIG_SERVICE_GIT_URL:file:///myData/workspace/petProjects/miroservices/configrepo}
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:9761}/eureka/

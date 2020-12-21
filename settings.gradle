@@ -1,0 +1,9 @@
+rootProject.name = 'ms-architecture'
+
+include 'discovery'
+include 'gateway'
+include 'users'
+include 'configserver'
+include 'oauth'
+include 'productCatalog'
+include 'front-end-server'

@@ -1,0 +1,27 @@
+spring:
+  cloud:
+    gateway:
+      x-forwarded:
+        enabled: true
+        for-enabled: true
+        for-append: true
+        proto-enabled: false
+        host-enabled: false
+        port-enabled: false
+      routes:
+        - id: front_end_route
+          uri: lb://fakefrontEndServer
+          predicates:
+            - Path=/front-end/**
+        - id: api_users_route
+          uri: lb://users
+          predicates:
+            - Path=/api/users-management/**
+        - id: api_oauth_route
+          uri: lb://oauth
+          predicates:
+            - Path=/oauth/**
+        - id: product_catalog_route
+          uri: lb://productCatalog
+          predicates:
+            - Path=/api/product-catalog/**

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+#api-token {
+    border: 1px solid black;
+    margin: 10px;
+    font-size: 13px;
+    padding: 10px;
+}
+</style>
+<body>
+<h1>Vous authentifié !</h1>
+
+<h2>Veuillez utiliser le token suivant pour accéder à vos API</h2>
+
+<div id="api-token"></div>
+<script>
+    const token = window.location.href.split('=')[1].split('&')[0];
+    document.getElementById('api-token').innerHTML = token;
+</script>
+
+
+</body>
+</html>

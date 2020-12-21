@@ -1,0 +1,25 @@
+server:
+  servlet:
+    context-path: /oauth
+
+health:
+  config:
+    enabled: false
+
+# ===============================
+# = DATABASE STUFF
+# ===============================
+spring:
+  jpa.database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    username: postgres
+    password: password
+    driverClassName: org.postgresql.Driver
+    initialization-mode: always
+
+# ===============================
+# = Key to sign jwt tokens
+# ===============================
+signing:
+  key: signing_key_here_replace_me

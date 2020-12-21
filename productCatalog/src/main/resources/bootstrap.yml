@@ -1,0 +1,26 @@
+server:
+  port: 9088
+
+spring:
+  application:
+    name: productCatalog
+  cloud:
+    config:
+      enabled: true
+      failFast: true
+      label: master
+      discovery:
+        enabled: true
+        serviceId: configserver
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:9761}/eureka/
+
+signing:
+  key: signing_key_here_replace_me

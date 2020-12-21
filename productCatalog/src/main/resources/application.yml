@@ -1,0 +1,7 @@
+server:
+  servlet:
+    context-path: /api/product-catalog
+
+health:
+  config:
+    enabled: false
